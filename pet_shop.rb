@@ -21,3 +21,10 @@ end
 def stock_count(shop)
     return shop[:pets].length()
 end
+
+# here I return the total number of the same breed of, but I deleted the .count method on the test
+def pets_by_breed(shop,breed)
+  total_num = 0
+  shop[:pets].each{|x| total_num += 1 if x[:breed] == breed}
+  return total_num
+end
