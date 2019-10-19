@@ -140,7 +140,7 @@ class TestPetShop < Minitest::Test
     pet = find_pet_by_name(@pet_shop, "Fred")
     assert_nil(pet)
   end
-  
+
   def test_remove_pet_by_name
     remove_pet_by_name(@pet_shop, "Arthur")
     pet = find_pet_by_name(@pet_shop,"Arthur")

@@ -28,7 +28,7 @@ def pets_by_breed(shop,breed)
   shop[:pets].each{|x| total_num.push(x[:breed]) if x[:breed] == breed}
   return total_num
 end
-
+#in 5 lines
 def find_pet_by_name(shop,name)
   for pet in shop[:pets]
     if pet[:name] == name
@@ -38,6 +38,7 @@ def find_pet_by_name(shop,name)
   return nil
 end
 
+#in one line
 def remove_pet_by_name (shop,name)
-  shop[:pets].each{|x| x == nil if x[:name] == name}
+  shop[:pets].each{|x| shop[:pets].delete(x) if x[:name] == name}
 end
